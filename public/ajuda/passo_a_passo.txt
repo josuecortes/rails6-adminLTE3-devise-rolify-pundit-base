@@ -1,0 +1,49 @@
+ruby 2.7.1
+
+rails _6.0.4.1_ new siscom --database=postgresql --skip-javascript
+
+caso precise renomear ** USAR GEM RENAME
+rails g rename:into novo-nome
+
+/database.yml
+->
+user: postgres
+password: 12345678
+->
+
+rails db:create
+
+/gemfile
+->
+gem 'devise'
+gem 'rolify'
+gem 'pundit'
+gem 'rename'
+
+rails generate controller home index
+
+template: https://adminlte.io/docs/3.1/
+
+clonar em /public
+
+  -> git clone https://github.com/ColorlibHQ/AdminLTE.git
+  
+  ## só pra ver o layout/index
+  https://dev.to/brayvasq/integrate-andminlte-with-ruby-on-rails-6-od7
+  
+criar a pasta javascripts dentro de assets
+
+mkdir app/views/base
+touch app/views/base/_header.html.erb
+touch app/views/base/_sidebar.html.erb
+touch app/views/base/_footer.html.erb
+touch app/views/base/_control_sidebar.html.erb
+
+rails g devise:install
+
+rails g devise User
+
+rails db:migrate
+
+rails generate controller home index
+

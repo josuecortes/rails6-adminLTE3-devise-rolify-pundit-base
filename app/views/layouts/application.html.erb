@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Rails6 AdminLTE 3.0</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link href="/adminLTE/plugins/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/adminLTE/dist/css/adminlte.min.css" rel="stylesheet" type="text/css">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="hold-transition sidebar-mini layout-fixed">
+      <div class="wrapper">
+        <%= render "base/header" %>
+        <%= render "base/sidebar" %>
+
+        <div class="content-wrapper">
+          <section class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1>Blank Page</h1>
+                </div>
+                <div class="col-sm-6">
+                  <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Blank Page</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section class="content">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Title</h3>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                Start creating your amazing application!
+                <%= yield %>
+              </div>
+              <div class="card-footer">
+                Footer
+              </div>
+            </div>
+          </section>
+        </div>
+        
+        <%= render "base/footer" %>
+        <%= render "base/control_sidebar" %>
+      <div>
+
+      <script src="/adminLTE/plugins/jquery/jquery.min.js"></script>
+      <script src="/adminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="/adminLTE/dist/js/adminlte.min.js"></script>
+      <script src="/adminLTE/dist/js/demo.js"></script>
+  </body>
+</html>
